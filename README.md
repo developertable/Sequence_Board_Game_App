@@ -29,7 +29,10 @@ A fully functional Java implementation of the classic Sequence board game featur
 **Windows:**
 ```batch
 # Download and run the installer
-scripts/install.bat
+
+Mac/Linux:
+bashchmod +x scripts/install.sh
+./scripts/install.sh
 
 🚀 Installation Instructions
 Choose one of the following installation methods:
@@ -69,15 +72,15 @@ Find "Sequence Board Game" in your applications menu (Linux)
 Method 2: Manual Installation
 
 Clone or download this repository:
-git clone https://github.com/developertable/Sequence_Board_Game_App.git
+bashgit clone https://github.com/developertable/Sequence_Board_Game_App.git
 cd Sequence_Board_Game_App
 
 Compile the Java files:
-cd src
+bashcd src
 javac *.java
 
 Run the game:
-# GUI Version (Recommended)
+bash# GUI Version (Recommended)
 java SequenceGameGUI
 
 # Console Version
@@ -90,10 +93,9 @@ Create a portable JAR file:
 bash# Windows
 scripts\create-jar.bat
 
-**Mac/Linux:**
-```bash
-chmod +x scripts/install.sh
-./scripts/install.sh
+# Mac/Linux
+chmod +x scripts/create-jar.sh
+./scripts/create-jar.sh
 
 Run the JAR file:
 bashjava -jar SequenceGame.jar
@@ -103,7 +105,6 @@ Move the JAR file anywhere and run it:
 The JAR file is completely portable
 Can be run on any computer with Java installed
 No additional installation required
-
 
 
 🎮 How to Start Playing
