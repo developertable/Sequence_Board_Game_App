@@ -27,10 +27,9 @@ A fully functional Java implementation of the classic Sequence board game featur
 ### Option 1: Automated Installation (Recommended)
 
 **Windows:**
-```batch
 # Download and run the installer
 
-Mac/Linux:
+**Mac/Linux:**
 bashchmod +x scripts/install.sh
 ./scripts/install.sh
 
