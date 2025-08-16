@@ -1,248 +1,151 @@
-# Sequence Board Game App 🎯
+# 🎯 Sequence Board Game App
 
-A fully functional Java implementation of the classic Sequence board game featuring both human vs human and human vs AI gameplay modes.
+A **fully functional Java implementation** of the classic Sequence board game featuring **human vs human** and **human vs AI** gameplay modes.
 
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
 ![Swing](https://img.shields.io/badge/GUI-Swing-blue?style=for-the-badge)
 
+---
+
 ## 🎮 Features
 
-- **Complete GUI Interface** with intuitive click-to-play mechanics
-- **Three AI Difficulty Levels**:
-  - 🤖 **Suppandi** (Easy) - Basic strategy with random moves
-  - 🧠 **Chacha Chaudhary** (Medium) - Smart tactical player  
-  - 👑 **Chanakya** (Hard) - Master strategist with advanced algorithms
-- **Turn Timer** - 15 seconds per turn to keep games moving
-- **Visual Sequence Highlighting** - Completed sequences are clearly marked
-- **Dead Card Detection** - Automatic detection and handling of unplayable cards
-- **Console Version** - Alternative text-based gameplay
-- **Full Sequence Rules** - Authentic gameplay experience
+- 🖥 **Complete GUI Interface** — intuitive click-to-play mechanics  
+- 🤖 **Three AI Difficulty Levels**:  
+  - **Suppandi** *(Easy)* — Basic strategy with random moves  
+  - **Chacha Chaudhary** *(Medium)* — Smart tactical play  
+  - **Chanakya** *(Hard)* — Master strategist with advanced algorithms  
+- ⏱ **Turn Timer** — 15 seconds per move to keep games flowing  
+- ✨ **Visual Sequence Highlighting** — Completed sequences clearly marked  
+- 🚫 **Dead Card Detection** — Auto-detects & handles unplayable cards  
+- 💻 **Console Version** — Text-based gameplay option  
+- 📜 **Full Sequence Rules** — Authentic gameplay experience  
+
+---
 
 ## 🚀 Quick Start
 
-### Prerequisites
-- Java 8 or higher installed on your system
-- Command line access
+### 📋 Prerequisites
+- Java 8 or higher installed  
+- Command line access  
 
-### Option 1: Automated Installation (Recommended)
+---
 
-**Windows:**
-# Download and run the installer
+### ⚡ Option 1: Automated Installation (Recommended)
 
-**Mac/Linux:**
-bashchmod +x scripts/install.sh
+#### **Windows**
+```bash
+# Download or clone this repository
+# Navigate to the project folder
+scripts\install.bat
+```
+Run the game:  
+- Double-click **"Sequence Game.bat"** on your desktop  
+- OR:  
+```bash
+java -jar C:\SequenceGame\SequenceGame.jar
+```
+
+#### **Mac / Linux**
+```bash
+chmod +x scripts/install.sh
 ./scripts/install.sh
+```
+Run the game:  
+- `sequence-game` from terminal (after restart)  
+- OR: `~/SequenceGame/run-sequence.sh`  
+- OR: Find "Sequence Board Game" in applications menu  
 
-🚀 Installation Instructions
-Choose one of the following installation methods:
-Method 1: Automated Installation (Recommended)
-Windows Users:
+---
 
-Download or clone this repository
-Navigate to the project folder
-Run the installer:
-batchscripts\install.bat
-
-Follow the on-screen instructions
-Run the game:
-
-Double-click "Sequence Game.bat" on your desktop, OR
-Run java -jar C:\SequenceGame\SequenceGame.jar from anywhere
-
-
-
-Mac/Linux Users:
-
-Download or clone this repository
-Open Terminal and navigate to the project folder
-Make the script executable and run:
-bashchmod +x scripts/install.sh
-./scripts/install.sh
-
-Follow the on-screen instructions
-Run the game:
-
-Run sequence-game from terminal (after restart), OR
-Run ~/SequenceGame/run-sequence.sh, OR
-Find "Sequence Board Game" in your applications menu (Linux)
-
-
-
-Method 2: Manual Installation
-
-Clone or download this repository:
-bashgit clone https://github.com/developertable/Sequence_Board_Game_App.git
+### 🛠 Option 2: Manual Installation
+```bash
+git clone https://github.com/developertable/Sequence_Board_Game_App.git
 cd Sequence_Board_Game_App
-
-Compile the Java files:
-bashcd src
+cd src
 javac *.java
+java SequenceGameGUI   # GUI version
+java GameController    # Console version
+```
 
-Run the game:
-bash# GUI Version (Recommended)
-java SequenceGameGUI
+---
 
-# Console Version
-java GameController
-
-
-Method 3: Portable JAR File
-
-Create a portable JAR file:
-bash# Windows
+### 📦 Option 3: Portable JAR
+```bash
+# Windows
 scripts\create-jar.bat
 
 # Mac/Linux
 chmod +x scripts/create-jar.sh
 ./scripts/create-jar.sh
+```
+Run anywhere:  
+```bash
+java -jar SequenceGame.jar
+```
 
-Run the JAR file:
-bashjava -jar SequenceGame.jar
+---
 
-Move the JAR file anywhere and run it:
+## 🎮 How to Play
 
-The JAR file is completely portable
-Can be run on any computer with Java installed
-No additional installation required
+### 🎯 Objective
+Be the first to create **two sequences** of five chips in a row (horizontal, vertical, or diagonal).
 
+### 🃏 Card Types
+- **Regular Cards** — Match the board position exactly  
+- **Two-Eyed Jacks (♥♦)** — Wild cards (place anywhere)  
+- **One-Eyed Jacks (♠♣)** — Remove opponent’s chip (except protected ones)  
 
-🎮 How to Start Playing
-GUI Version (Recommended):
+### 📝 Special Rules
+- Completed sequences are protected  
+- Dead cards can be discarded  
+- 15-second turn timer  
 
-Run the game using any of the methods above
-Choose game mode:
+---
 
-Human vs Human
-Human vs Suppandi (Easy AI)
-Human vs Chacha Chaudhary (Medium AI)
-Human vs Chanakya (Hard AI)
+## ⚙️ Troubleshooting
 
+| Issue | Solution |
+|-------|----------|
+| `"Java is not recognized"` (Windows) | Install Java, add to PATH |
+| `"Permission denied"` (Mac/Linux) | `chmod +x scripts/*.sh` |
+| Game doesn’t start | Check Java version, compile manually |
+| Graphics issues | Update drivers, try `-Djava.awt.headless=false` |
 
-Enter player names when prompted
-Start playing!
+---
 
-Console Version:
+## 🗑️ Uninstallation
 
-Run: java GameController from the src directory
-Follow text-based prompts
-Use coordinates to make moves
+**Windows:**
+```bash
+scripts\uninstall.bat
+```
 
-🎯 How to Play
-Objective
-Be the first player to create TWO sequences of five chips in a row (horizontal, vertical, or diagonal).
-Game Setup
+**Mac/Linux:**
+```bash
+./scripts/uninstall.sh
+```
+Or delete:  
+- `C:\SequenceGame` (Windows)  
+- `~/SequenceGame` (Mac/Linux)  
 
-Each player starts with 7 cards
-Players take turns playing cards and placing chips
-Corners are "FREE" spaces that count toward sequences
+---
 
-Card Types
+## 📱 System Requirements
+- OS: Windows 7+, macOS 10.10+, Linux  
+- Java: 8+  
+- RAM: 256 MB (512 MB recommended)  
+- Storage: 50 MB free  
+- Display: 1024×768 min  
 
-Regular Cards: Must match the board position exactly
-Two-Eyed Jacks (Hearts/Diamonds): Wild cards - place anywhere
-One-Eyed Jacks (Spades/Clubs): Remove opponent's chip (except sequence chips)
+---
 
-Special Rules
+## 📞 Contact & Support
+**Developer:** Rahul Kurra  
+📧 **Email:** rahul.kurra1986@gmail.com  
+💻 **GitHub:** [@developertable](https://github.com/developertable)
 
-Completed sequence chips are protected and cannot be removed
-Dead cards (both board positions blocked) can be discarded
-15-second turn timer keeps games moving
-First player to complete 2 sequences wins!
+For bugs, features, or questions — please open an issue on GitHub.
 
+---
 
-⚙️ Installation Verification
-To verify your installation works correctly:
-
-Test compilation:
-bashcd src
-javac *.java
-
-Test game launch:
-bashjava SequenceGameGUI
-
-Expected result: Game window opens with menu options
-
-🔧 Troubleshooting
-Common Issues:
-"Java is not recognized" (Windows):
-
-Install Java from Oracle's website
-Add Java to your system PATH
-Restart Command Prompt after installation
-
-"Permission denied" (Mac/Linux):
-
-Make scripts executable: chmod +x scripts/*.sh
-Run with: ./script-name.sh
-Check file permissions in the directory
-
-Game doesn't start:
-
-Verify Java version: java -version (must be 8+)
-Ensure all .java files are in the src/ directory
-Try manual compilation first
-Check for error messages in terminal
-
-Installation script fails:
-
-Try Manual Installation (Method 2)
-Check if you have write permissions to the installation directory
-Run terminal/command prompt as administrator (if needed)
-
-Graphics issues:
-
-Update your graphics drivers
-Try running with: java -Djava.awt.headless=false SequenceGameGUI
-
-🗑️ Uninstallation
-To remove the game:
-Windows:
-batchscripts\uninstall.bat
-Mac/Linux:
-bash./scripts/uninstall.sh
-Or manually delete:
-
-Installation directory: C:\SequenceGame (Windows) or ~/SequenceGame (Mac/Linux)
-Desktop shortcuts
-Application menu entries (Linux)
-
-📱 System Requirements
-
-Operating System: Windows 7+, macOS 10.10+, Linux (any modern distribution)
-Java: Version 8 or higher
-RAM: 256 MB minimum (512 MB recommended)
-Storage: 50 MB free space
-Display: 1024x768 minimum resolution
-Input: Mouse and keyboard
-
-
-🎯 Quick Start Commands
-bash# Clone repository
-git clone https://github.com/developertable/Sequence_Board_Game_App.git
-
-# Navigate to project
-cd Sequence_Board_Game_App
-
-# Install (Windows)
-scripts\install.bat
-
-# Install (Mac/Linux)
-chmod +x scripts/install.sh && ./scripts/install.sh
-
-# Manual run
-cd src && javac *.java && java SequenceGameGUI
-
-# Create portable JAR
-scripts\create-jar.bat  # Windows
-./scripts/create-jar.sh # Mac/Linux
-
-📞 Contact & Support
-Developer: Rahul Kurra
-Email: rahul.kurra1986@gmail.com
-GitHub: @developertable
-Repository: Sequence_Board_Game_App
-For bug reports, feature requests, or questions about the implementation, please open an issue on GitHub.
-
-🎯 Enjoy playing Sequence! May the best strategist win! 🎮
-
-Last updated: August 2025
+**🎯 Enjoy playing Sequence! May the best strategist win! 🎮**
